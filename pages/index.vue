@@ -2,6 +2,7 @@
   <div class="">
     <h1 class="text-8xl">Index Page</h1>
     <p>This is the index page of my portfolio.</p>
+    <button class="btn"> Teste </button>
   </div>
 </template>
 
