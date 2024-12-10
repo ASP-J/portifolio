@@ -1,17 +1,17 @@
 <template>
-  <div class="">
-    <h1 class="text-8xl">Index Page</h1>
+  <div>
+    <h1 class="text-8xl textarea-primary">Index Page</h1>
     <p>This is the index page of my portfolio.</p>
-    <button class="btn"> Teste </button>
+    <button class="btn btn-primary"> Teste </button>
+    <ThemeSelector />
   </div>
 </template>
 
 <script setup lang="ts">
-// You can add your script logic here
-</script>
+import { computed } from 'vue';
+import { useLayout } from '~/store/layout';
+import ThemeSelector from '~/components/shared/ThemeSelector.vue';
 
-<style scoped>
-h1 {
-  color: #42b983;
-}
-</style>
+const layout = useLayout();
+const themeClass = computed(() => layout.theme === 'darkTheme' ? 'dark' : 'light');
+</script>
